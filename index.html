@@ -4,168 +4,683 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrijo e Nesti Advogados</title>
-
+  <meta name="description" content="Carrijo e Nesti Advogados. Atendimento jurídico estratégico em Direito do Trabalho, Civil, Criminal, Família, Sucessões e Empresarial.">
   <style>
+    :root {
+      --bg: #07111d;
+      --bg-2: #0d1b2a;
+      --bg-3: #12263a;
+      --gold: #c8a96b;
+      --gold-soft: #9f7f45;
+      --text: #f5f1e8;
+      --muted: #c9c2b5;
+      --card: rgba(255, 255, 255, 0.05);
+      --line: rgba(255, 255, 255, 0.10);
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #000;
-      color: #fff;
+      font-family: "Georgia", "Times New Roman", serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(200,169,107,0.10), transparent 30%),
+        radial-gradient(circle at top right, rgba(200,169,107,0.08), transparent 25%),
+        linear-gradient(180deg, #03070d 0%, #07111d 35%, #0d1b2a 70%, #07111d 100%);
+      line-height: 1.6;
     }
 
-    header {
-      text-align: center;
-      padding: 60px 20px;
+    a {
+      color: inherit;
     }
 
-    .logo {
-      max-width: 140px;
+    .topbar {
+      width: 100%;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(12px);
+      background: rgba(3, 7, 13, 0.78);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .nav-logo {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      display: block;
+      filter: drop-shadow(0 0 12px rgba(255,255,255,0.08));
+      flex-shrink: 0;
+    }
+
+    .nav-title {
+      font-size: 15px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(3,7,13,0.35), rgba(3,7,13,0.78)),
+        radial-gradient(circle at 50% 20%, rgba(200,169,107,0.10), transparent 24%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 220px;
+      background:
+        linear-gradient(to top, rgba(2,6,11,1), rgba(2,6,11,0.0)),
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 300' preserveAspectRatio='none'><path fill='%23040a12' d='M0,220 C120,200 160,160 250,165 C340,170 410,235 500,230 C610,224 640,120 760,125 C870,130 930,220 1040,215 C1180,208 1240,110 1360,112 C1450,113 1510,170 1600,190 L1600,300 L0,300 Z'/><path fill='%23071017' d='M0,245 C130,220 210,200 320,210 C430,220 500,255 610,250 C730,245 770,180 900,185 C1030,190 1110,245 1220,238 C1370,229 1450,180 1600,188 L1600,300 L0,300 Z'/></svg>") bottom center / cover no-repeat;
+      opacity: 0.95;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 20px 140px;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-copy {
+      max-width: 720px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 14px;
+      border: 1px solid rgba(200,169,107,0.35);
+      border-radius: 999px;
+      color: var(--gold);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
       margin-bottom: 20px;
+      background: rgba(255,255,255,0.03);
+    }
+
+    .hero-logo {
+      width: 110px;
+      height: auto;
+      display: block;
+      margin-bottom: 24px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 24px rgba(255,255,255,0.08));
     }
 
     h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
+      margin: 0 0 18px;
+      font-size: clamp(38px, 6vw, 70px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      font-weight: 700;
     }
 
     .headline {
-      font-size: 20px;
-      color: #ccc;
-      max-width: 800px;
-      margin: auto;
+      margin: 0 0 26px;
+      font-size: clamp(18px, 2.2vw, 24px);
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      max-width: 640px;
     }
 
-    .cta {
-      display: inline-block;
-      margin-top: 25px;
-      background: #fff;
-      color: #000;
-      padding: 15px 25px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
-      border-top: 1px solid #222;
-    }
-
-    h2 {
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
       margin-bottom: 20px;
     }
 
-    .box {
-      background: #0c0c0c;
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 15px;
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 22px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      transition: transform 0.18s ease, opacity 0.18s ease, background 0.18s ease;
+      box-shadow: var(--shadow);
     }
 
-    .urgencia {
-      background: #111;
-      border-left: 4px solid #fff;
-      padding: 20px;
-      margin-top: 20px;
+    .btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.96;
     }
 
-    footer {
+    .btn-primary {
+      background: linear-gradient(135deg, #d4b57a 0%, #b08a4f 100%);
+      color: #0a0d12;
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.05);
+      color: var(--text);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .microcopy {
+      color: #b6b0a3;
+      font-size: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .hero-card {
+      position: relative;
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-card h2 {
+      margin: 0 0 16px;
+      font-size: 28px;
+    }
+
+    .hero-card p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .hero-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .hero-list li {
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      font-family: Arial, Helvetica, sans-serif;
+      color: #ebe4d8;
+    }
+
+    .section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 84px 20px;
+    }
+
+    .section-header {
+      max-width: 760px;
+      margin-bottom: 32px;
+    }
+
+    .section-kicker {
+      color: var(--gold);
+      font-family: Arial, Helvetica, sans-serif;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
+    .section h2 {
+      margin: 0 0 14px;
+      font-size: clamp(32px, 4vw, 46px);
+      line-height: 1.1;
+    }
+
+    .section p.lead {
+      margin: 0;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 18px;
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 24px;
+      color: var(--text);
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .highlight {
+      color: var(--gold);
+    }
+
+    .areas .card {
+      min-height: 220px;
+    }
+
+    .trust-strip {
+      margin-top: 26px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .trust-pill {
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(200,169,107,0.25);
+      background: rgba(255,255,255,0.03);
+      color: #e8dfd1;
+      font-size: 14px;
+    }
+
+    .cta-band {
+      margin: 16px auto 0;
+      max-width: 1200px;
+      padding: 0 20px 84px;
+    }
+
+    .cta-band-inner {
+      border-radius: 24px;
+      padding: 34px;
+      background:
+        radial-gradient(circle at top right, rgba(200,169,107,0.18), transparent 30%),
+        linear-gradient(135deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .cta-band h3 {
+      margin: 0 0 8px;
+      font-size: 32px;
+    }
+
+    .cta-band p {
+      margin: 0;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .contact-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .contact-item {
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-item small {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--gold);
+      font-family: Arial, Helvetica, sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .contact-item strong,
+    .contact-item a {
+      font-size: 24px;
+      text-decoration: none;
+      color: var(--text);
+      word-break: break-word;
+    }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 20px 40px;
+      color: #a49d90;
+      font-family: Arial, Helvetica, sans-serif;
       text-align: center;
-      padding: 30px;
-      color: #888;
+      font-size: 14px;
     }
 
     .whatsapp-fixo {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #fff;
-      color: #000;
-      padding: 14px 18px;
-      border-radius: 50px;
-      font-weight: bold;
+      right: 18px;
+      bottom: 18px;
+      z-index: 30;
       text-decoration: none;
+      background: linear-gradient(135deg, #d4b57a 0%, #b08a4f 100%);
+      color: #0a0d12;
+      padding: 14px 18px;
+      border-radius: 999px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    }
+
+    @media (max-width: 960px) {
+      .hero-inner,
+      .grid-3,
+      .grid-2,
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-inner {
+        padding-top: 56px;
+        padding-bottom: 120px;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-logo {
+        width: 88px;
+      }
+
+      .nav-title {
+        white-space: normal;
+      }
+
+      .cta-band-inner {
+        padding: 24px;
+      }
+
+      .contact-item strong,
+      .contact-item a {
+        font-size: 20px;
+      }
     }
   </style>
 </head>
-
 <body>
 
-<header>
-  <img src="logo.png" class="logo">
-
-  <h1>Carrijo e Nesti Advogados</h1>
-
-  <p class="headline">
-    Está com problema trabalhista, familiar, criminal ou empresarial?
-    Fale agora com um advogado e entenda seus direitos.
-  </p>
-
-  <a class="cta" href="https://wa.me/5521994210611?text=Olá,%20vim%20pelo%20site%20e%20preciso%20de%20ajuda" target="_blank">
-    Falar com advogado agora
-  </a>
-</header>
-
-<section>
-  <h2>Como podemos te ajudar</h2>
-
-  <div class="box">Problemas com demissão, direitos não pagos ou vínculo de trabalho</div>
-  <div class="box">Divórcio, guarda, pensão alimentícia e conflitos familiares</div>
-  <div class="box">Inventário e partilha de bens</div>
-  <div class="box">Defesa em processos criminais</div>
-  <div class="box">Problemas contratuais e empresariais</div>
-
-  <a class="cta" href="https://wa.me/5521994210611?text=Preciso%20de%20ajuda%20jurídica" target="_blank">
-    Falar com advogado
-  </a>
-</section>
-
-<section>
-  <h2>Por que escolher nosso escritório?</h2>
-
-  <div class="box">Atendimento rápido e direto com advogado</div>
-  <div class="box">Análise estratégica do seu caso</div>
-  <div class="box">Atuação técnica e personalizada</div>
-  <div class="box">Total sigilo e segurança</div>
-
-  <a class="cta" href="https://wa.me/5521994210611?text=Quero%20atendimento" target="_blank">
-    Iniciar atendimento
-  </a>
-</section>
-
-<section>
-  <h2>Atendimento imediato</h2>
-
-  <div class="urgencia">
-    Quanto antes você agir, maiores são suas chances de resolver o problema.
-    Fale agora com um advogado.
+  <div class="topbar">
+    <div class="nav">
+      <div class="nav-brand">
+        <img src="logo.png" alt="Carrijo e Nesti Advogados" class="nav-logo">
+        <div class="nav-title">Carrijo e Nesti Advogados</div>
+      </div>
+      <div class="nav-links">
+        <a href="#areas">Áreas de atuação</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </div>
   </div>
 
-  <a class="cta" href="https://wa.me/5521994210611?text=Preciso%20de%20atendimento%20urgente" target="_blank">
-    Falar agora no WhatsApp
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="eyebrow">Advocacia estratégica no Rio de Janeiro</div>
+        <img src="logo.png" alt="Logo Carrijo e Nesti Advogados" class="hero-logo">
+
+        <h1>
+          Defesa técnica, postura estratégica e atendimento de <span class="highlight">alto padrão</span>.
+        </h1>
+
+        <p class="headline">
+          Atuação jurídica em Direito do Trabalho, Civil, Criminal, Família, Sucessões e Empresarial, com seriedade, discrição e foco em solução.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/5521994210611?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20atendimento" target="_blank">
+            Falar com advogado agora
+          </a>
+          <a class="btn btn-secondary" href="#areas">
+            Conhecer áreas de atuação
+          </a>
+        </div>
+
+        <div class="microcopy">
+          Atendimento direto, comunicação clara e análise estratégica do caso.
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h2>Atendimento com posicionamento premium</h2>
+        <p>
+          Um escritório voltado a clientes que buscam segurança jurídica, resposta técnica e condução profissional em questões sensíveis e relevantes.
+        </p>
+        <ul class="hero-list">
+          <li>Atendimento personalizado e sigiloso</li>
+          <li>Estratégia jurídica conforme a complexidade do caso</li>
+          <li>Atuação judicial e extrajudicial</li>
+          <li>Comunicação direta e objetiva</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="areas">
+    <div class="section-header">
+      <div class="section-kicker">Áreas de atuação</div>
+      <h2>Atuação técnica em demandas patrimoniais, empresariais, familiares, trabalhistas e criminais.</h2>
+      <p class="lead">
+        Estrutura enxuta, atuação estratégica e atenção individualizada para condução segura de cada demanda.
+      </p>
+    </div>
+
+    <div class="grid grid-3 areas">
+      <div class="card">
+        <h3>Direito do Trabalho</h3>
+        <p>Reclamações trabalhistas, verbas rescisórias, vínculo de emprego, horas extras, defesa empresarial e consultoria preventiva.</p>
+      </div>
+
+      <div class="card">
+        <h3>Direito Civil</h3>
+        <p>Contratos, responsabilidade civil, cobranças, indenizações, obrigações, disputas patrimoniais e medidas estratégicas de proteção de direitos.</p>
+      </div>
+
+      <div class="card">
+        <h3>Direito Criminal</h3>
+        <p>Defesa técnica em inquéritos, audiências, procedimentos penais e acompanhamento jurídico em situações urgentes e sensíveis.</p>
+      </div>
+
+      <div class="card">
+        <h3>Direito de Família</h3>
+        <p>Divórcio, guarda, pensão alimentícia, dissolução de união estável e conflitos familiares que exigem firmeza e discrição.</p>
+      </div>
+
+      <div class="card">
+        <h3>Sucessões</h3>
+        <p>Inventário, arrolamento, partilha, planejamento sucessório e regularização patrimonial com condução técnica e segura.</p>
+      </div>
+
+      <div class="card">
+        <h3>Direito Empresarial</h3>
+        <p>Assessoria jurídica estratégica para empresas, contratos, prevenção de passivos, cobrança, consultoria e contencioso empresarial.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="diferenciais">
+    <div class="section-header">
+      <div class="section-kicker">Diferenciais</div>
+      <h2>Excelência na forma de atender, estruturar e conduzir cada caso.</h2>
+      <p class="lead">
+        Um escritório não deve apenas responder processos. Deve proteger patrimônio, imagem, liberdade e estabilidade jurídica.
+      </p>
+    </div>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Análise estratégica</h3>
+        <p>Cada caso é avaliado com profundidade, considerando risco, viabilidade, urgência e melhor posicionamento jurídico.</p>
+      </div>
+
+      <div class="card">
+        <h3>Atendimento direto</h3>
+        <p>Comunicação objetiva, sem ruído e com acompanhamento profissional próximo em todas as etapas relevantes.</p>
+      </div>
+
+      <div class="card">
+        <h3>Discrição e segurança</h3>
+        <p>Casos sensíveis exigem postura, reserva e condução técnica. O atendimento é orientado por sigilo e responsabilidade.</p>
+      </div>
+
+      <div class="card">
+        <h3>Posicionamento profissional</h3>
+        <p>Atuação pensada para clientes que valorizam qualidade jurídica, clareza e tomada de decisão bem estruturada.</p>
+      </div>
+    </div>
+
+    <div class="trust-strip">
+      <div class="trust-pill">Atendimento personalizado</div>
+      <div class="trust-pill">Estratégia jurídica</div>
+      <div class="trust-pill">Atuação judicial e extrajudicial</div>
+      <div class="trust-pill">Sigilo profissional</div>
+      <div class="trust-pill">Comunicação objetiva</div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div class="cta-band-inner">
+      <div>
+        <h3>Precisa de orientação jurídica segura?</h3>
+        <p>Fale diretamente com o escritório e receba um direcionamento inicial com clareza e profissionalismo.</p>
+      </div>
+      <a class="btn btn-primary" href="https://wa.me/5521994210611?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20atendimento" target="_blank">
+        Iniciar atendimento
+      </a>
+    </div>
+  </div>
+
+  <section class="section" id="contato">
+    <div class="section-header">
+      <div class="section-kicker">Contato</div>
+      <h2>Atendimento direto e rápido.</h2>
+      <p class="lead">
+        Entre em contato para análise inicial e orientação sobre o caminho jurídico mais adequado ao seu caso.
+      </p>
+    </div>
+
+    <div class="contact-box">
+      <div class="contact-item">
+        <small>WhatsApp</small>
+        <strong><a href="https://wa.me/5521994210611?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20atendimento" target="_blank">(21) 99421-0611</a></strong>
+      </div>
+
+      <div class="contact-item">
+        <small>E-mail</small>
+        <strong><a href="mailto:carrijo.adv@gmail.com">carrijo.adv@gmail.com</a></strong>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    © 2026 Carrijo e Nesti Advogados. Todos os direitos reservados.
+  </footer>
+
+  <a class="whatsapp-fixo" href="https://wa.me/5521994210611?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20atendimento" target="_blank">
+    WhatsApp
   </a>
-</section>
-
-<section>
-  <h2>Contato</h2>
-
-  <p><strong>WhatsApp:</strong> (21) 99421-0611</p>
-  <p><strong>E-mail:</strong> carrijo.adv@gmail.com</p>
-
-  <a class="cta" href="mailto:carrijo.adv@gmail.com">
-    Enviar e-mail
-  </a>
-</section>
-
-<footer>
-  © 2026 Carrijo e Nesti Advogados
-</footer>
-
-<a class="whatsapp-fixo" href="https://wa.me/5521994210611" target="_blank">
-  WhatsApp
-</a>
 
 </body>
 </html>
