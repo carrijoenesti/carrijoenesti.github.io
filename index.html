@@ -4,68 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrijo e Nesti Advogados</title>
-  <meta name="description" content="Carrijo e Nesti Advogados. Especialistas em Direito do Trabalho, Civil, Criminal, Família, Sucessões e Empresarial.">
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #000;
+      font-family: Arial, sans-serif;
+      background: #000;
       color: #fff;
-      line-height: 1.6;
     }
 
     header {
       text-align: center;
       padding: 60px 20px;
-      border-bottom: 1px solid #1f1f1f;
     }
 
     .logo {
       max-width: 140px;
       margin-bottom: 20px;
-      filter: invert(1) brightness(1.2) contrast(1.1);
     }
 
     h1 {
-      margin: 0 0 10px;
-      font-size: 38px;
+      font-size: 36px;
+      margin-bottom: 10px;
     }
 
-    .subtitulo {
+    .headline {
+      font-size: 20px;
       color: #ccc;
       max-width: 800px;
-      margin: 0 auto 20px;
+      margin: auto;
     }
 
-    .botao {
+    .cta {
       display: inline-block;
+      margin-top: 25px;
       background: #fff;
       color: #000;
-      padding: 14px 24px;
+      padding: 15px 25px;
       border-radius: 6px;
       text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav {
-      text-align: center;
-      padding: 15px;
-      border-bottom: 1px solid #1f1f1f;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 15px;
       font-weight: bold;
     }
 
@@ -73,24 +50,25 @@
       max-width: 1000px;
       margin: auto;
       padding: 40px 20px;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid #222;
     }
 
     h2 {
-      margin-top: 0;
+      margin-bottom: 20px;
     }
 
-    .areas {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
+    .box {
       background: #0c0c0c;
       padding: 20px;
-      border: 1px solid #222;
       border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .urgencia {
+      background: #111;
+      border-left: 4px solid #fff;
+      padding: 20px;
+      margin-top: 20px;
     }
 
     footer {
@@ -99,101 +77,84 @@
       color: #888;
     }
 
-    .whatsapp {
+    .whatsapp-fixo {
       position: fixed;
       bottom: 20px;
       right: 20px;
       background: #fff;
       color: #000;
-      padding: 12px 18px;
+      padding: 14px 18px;
       border-radius: 50px;
-      text-decoration: none;
       font-weight: bold;
+      text-decoration: none;
     }
-
   </style>
 </head>
 
 <body>
 
 <header>
-  <img src="logo.png" alt="Carrijo e Nesti Advogados" class="logo">
+  <img src="logo.png" class="logo">
 
   <h1>Carrijo e Nesti Advogados</h1>
 
-  <p class="subtitulo">
-    Atuação jurídica estratégica, técnica e personalizada em Direito do Trabalho, Civil, Criminal, Família, Sucessões e Empresarial.
+  <p class="headline">
+    Está com problema trabalhista, familiar, criminal ou empresarial?
+    Fale agora com um advogado e entenda seus direitos.
   </p>
 
-  <a class="botao" href="https://wa.me/5521994210611" target="_blank">
-    Fale conosco no WhatsApp
+  <a class="cta" href="https://wa.me/5521994210611?text=Olá,%20vim%20pelo%20site%20e%20preciso%20de%20ajuda" target="_blank">
+    Falar com advogado agora
   </a>
 </header>
 
-<nav>
-  <a href="#sobre">Sobre</a>
-  <a href="#areas">Áreas</a>
-  <a href="#contato">Contato</a>
-</nav>
+<section>
+  <h2>Como podemos te ajudar</h2>
 
-<section id="sobre">
-  <h2>Sobre o Escritório</h2>
-  <p>
-    O escritório Carrijo e Nesti Advogados atua com seriedade, excelência técnica e atendimento personalizado,
-    oferecendo soluções jurídicas seguras para pessoas físicas e jurídicas.
-  </p>
+  <div class="box">Problemas com demissão, direitos não pagos ou vínculo de trabalho</div>
+  <div class="box">Divórcio, guarda, pensão alimentícia e conflitos familiares</div>
+  <div class="box">Inventário e partilha de bens</div>
+  <div class="box">Defesa em processos criminais</div>
+  <div class="box">Problemas contratuais e empresariais</div>
 
-  <p>
-    Nossa atuação é voltada à prevenção de riscos, defesa de direitos e condução estratégica de demandas judiciais e extrajudiciais,
-    sempre com clareza e compromisso com o cliente.
-  </p>
+  <a class="cta" href="https://wa.me/5521994210611?text=Preciso%20de%20ajuda%20jurídica" target="_blank">
+    Falar com advogado
+  </a>
 </section>
 
-<section id="areas">
-  <h2>Áreas de Atuação</h2>
+<section>
+  <h2>Por que escolher nosso escritório?</h2>
 
-  <div class="areas">
+  <div class="box">Atendimento rápido e direto com advogado</div>
+  <div class="box">Análise estratégica do seu caso</div>
+  <div class="box">Atuação técnica e personalizada</div>
+  <div class="box">Total sigilo e segurança</div>
 
-    <div class="card">
-      <h3>Direito do Trabalho</h3>
-      <p>Reclamações, verbas trabalhistas e defesa empresarial.</p>
-    </div>
+  <a class="cta" href="https://wa.me/5521994210611?text=Quero%20atendimento" target="_blank">
+    Iniciar atendimento
+  </a>
+</section>
 
-    <div class="card">
-      <h3>Direito Civil</h3>
-      <p>Contratos, indenizações e conflitos patrimoniais.</p>
-    </div>
+<section>
+  <h2>Atendimento imediato</h2>
 
-    <div class="card">
-      <h3>Direito Criminal</h3>
-      <p>Defesa técnica e acompanhamento processual.</p>
-    </div>
-
-    <div class="card">
-      <h3>Família</h3>
-      <p>Divórcio, guarda, alimentos e convivência.</p>
-    </div>
-
-    <div class="card">
-      <h3>Sucessões</h3>
-      <p>Inventário, partilha e planejamento patrimonial.</p>
-    </div>
-
-    <div class="card">
-      <h3>Empresarial</h3>
-      <p>Assessoria jurídica estratégica para empresas.</p>
-    </div>
-
+  <div class="urgencia">
+    Quanto antes você agir, maiores são suas chances de resolver o problema.
+    Fale agora com um advogado.
   </div>
+
+  <a class="cta" href="https://wa.me/5521994210611?text=Preciso%20de%20atendimento%20urgente" target="_blank">
+    Falar agora no WhatsApp
+  </a>
 </section>
 
-<section id="contato">
+<section>
   <h2>Contato</h2>
 
   <p><strong>WhatsApp:</strong> (21) 99421-0611</p>
   <p><strong>E-mail:</strong> carrijo.adv@gmail.com</p>
 
-  <a class="botao" href="mailto:carrijo.adv@gmail.com">
+  <a class="cta" href="mailto:carrijo.adv@gmail.com">
     Enviar e-mail
   </a>
 </section>
@@ -202,7 +163,7 @@
   © 2026 Carrijo e Nesti Advogados
 </footer>
 
-<a class="whatsapp" href="https://wa.me/5521994210611" target="_blank">
+<a class="whatsapp-fixo" href="https://wa.me/5521994210611" target="_blank">
   WhatsApp
 </a>
 
