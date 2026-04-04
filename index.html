@@ -3,375 +3,216 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carrijo e Nesti Advogados</title>
-  <meta name="description" content="Carrijo e Nesti Advogados. Atuação em Direito do Trabalho, Civil, Criminal, Família, Sucessões e Empresarial.">
+  <title>Carrijo e Nesti Advogados | Direito do Trabalho</title>
+  <meta name="description" content="Advogado trabalhista no Rio de Janeiro. Rescisão, horas extras, vínculo de emprego, assédio moral e direitos do trabalhador. Atendimento rápido pelo WhatsApp.">
+
   <style>
-    :root {
-      --bg: #0a0a0a;
-      --bg-soft: #111111;
-      --line: #232323;
-      --text: #f5f5f5;
-      --muted: #bdbdbd;
-      --button: #ffffff;
-      --button-text: #000000;
-      --max: 1120px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
-      background: var(--bg);
-      color: var(--text);
       font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
+      background: #0a0a0a;
+      color: #ffffff;
     }
 
     .container {
-      width: 100%;
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 0 28px;
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
     }
 
-    .topo {
-      border-bottom: 1px solid var(--line);
-      background: rgba(10, 10, 10, 0.96);
-    }
-
-    .topo .container {
+    header {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 24px;
-      padding-top: 22px;
-      padding-bottom: 22px;
-    }
-
-    .brand {
-      display: flex;
       align-items: center;
-      gap: 18px;
-      min-width: 0;
-    }
-
-    .brand-logo {
-      width: 96px;
-      height: auto;
-      object-fit: contain;
-      flex-shrink: 0;
-      filter: brightness(0) invert(1);
-    }
-
-    .brand-name {
-      font-size: 14px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text);
-      font-weight: 600;
-    }
-
-    .menu {
-      display: flex;
-      align-items: center;
-      gap: 28px;
+      border-bottom: 1px solid #222;
+      gap: 20px;
       flex-wrap: wrap;
     }
 
-    .menu a {
-      color: var(--muted);
+    .logo {
+      height: 70px;
+    }
+
+    nav a {
+      color: #ccc;
       text-decoration: none;
+      margin-left: 20px;
       font-size: 15px;
     }
 
-    .menu a:hover {
-      color: var(--text);
+    nav a:hover {
+      color: #fff;
     }
 
     .hero {
-      padding: 110px 0 110px;
-    }
-
-    .hero .container {
-      max-width: 980px;
       text-align: center;
+      padding: 90px 20px 80px;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
-    .hero-logo {
-      width: 230px;
-      height: auto;
-      object-fit: contain;
-      margin: 0 auto 34px;
-      filter: brightness(0) invert(1);
+    .hero img {
+      height: 120px;
+      margin-bottom: 20px;
     }
 
     h1 {
-      margin: 0 0 22px;
-      font-size: 62px;
-      line-height: 1.08;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-    }
-
-    .subtitulo {
-      max-width: 780px;
-      margin: 0 auto 34px;
-      color: var(--muted);
-      font-size: 21px;
-      line-height: 1.7;
-    }
-
-    .hero-botoes {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .botao {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 52px;
-      padding: 0 24px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 15px;
-      transition: 0.2s ease;
-      border: 1px solid transparent;
-    }
-
-    .botao-principal {
-      background: var(--button);
-      color: var(--button-text);
-    }
-
-    .botao-secundario {
-      border-color: #353535;
-      color: var(--text);
-      background: transparent;
-    }
-
-    .botao:hover {
-      opacity: 0.92;
-    }
-
-    section {
-      padding: 90px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .section-narrow {
-      max-width: 860px;
+      font-size: 46px;
+      margin-bottom: 16px;
+      line-height: 1.15;
     }
 
     h2 {
-      margin: 0 0 18px;
-      font-size: 40px;
-      line-height: 1.15;
-      font-weight: 700;
-      letter-spacing: -0.02em;
+      font-size: 34px;
+      margin-bottom: 18px;
+      line-height: 1.2;
     }
 
-    .lead {
-      margin: 0;
-      color: var(--muted);
-      font-size: 18px;
-      line-height: 1.8;
+    h3 {
+      margin-bottom: 10px;
     }
 
-    .areas-grid {
+    p {
+      color: #bbb;
+      line-height: 1.7;
+    }
+
+    .hero p {
+      font-size: 19px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 14px 22px;
+      background: #fff;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: 0.2s ease;
+    }
+
+    .btn:hover {
+      opacity: 0.92;
+    }
+
+    .btn-secundario {
+      background: transparent;
+      color: #fff;
+      border: 1px solid #444;
+      margin-left: 12px;
+    }
+
+    section {
+      margin-top: 60px;
+      border-top: 1px solid #222;
+      padding-top: 60px;
+    }
+
+    .cards {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0;
-      margin-top: 36px;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
     }
 
-    .area {
-      padding: 28px 0;
-      border-bottom: 1px solid var(--line);
+    .card {
+      border: 1px solid #222;
+      padding: 24px;
+      border-radius: 6px;
+      background: #111;
     }
 
-    .area:nth-last-child(-n+2) {
-      border-bottom: none;
+    .card p {
+      margin-bottom: 0;
     }
 
-    .area:nth-child(odd) {
-      padding-right: 28px;
-      border-right: 1px solid var(--line);
+    .destaque {
+      border: 1px solid #222;
+      padding: 24px;
+      border-radius: 6px;
+      background: #111;
+      margin-bottom: 18px;
     }
 
-    .area:nth-child(even) {
-      padding-left: 28px;
-    }
-
-    .area h3 {
-      margin: 0 0 10px;
-      font-size: 25px;
-      font-weight: 600;
-    }
-
-    .area p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 17px;
-      line-height: 1.75;
-    }
-
-    .diferenciais {
+    .lista {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
-      margin-top: 38px;
+      gap: 14px;
+      margin-top: 20px;
     }
 
-    .diferencial {
-      padding: 26px;
-      background: var(--bg-soft);
-      border: 1px solid var(--line);
+    .lista-item {
+      border: 1px solid #222;
+      background: #111;
+      padding: 18px 20px;
+      border-radius: 6px;
+      color: #ddd;
+    }
+
+    .cta-box {
+      text-align: center;
+      border: 1px solid #222;
+      background: #111;
+      padding: 40px 24px;
       border-radius: 8px;
     }
 
-    .diferencial h3 {
-      margin: 0 0 10px;
-      font-size: 22px;
-      font-weight: 600;
-    }
-
-    .diferencial p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 16px;
-      line-height: 1.75;
-    }
-
-    .cta-final {
-      text-align: center;
-    }
-
-    .cta-final p {
+    .cta-box p {
       max-width: 720px;
-      margin: 0 auto 28px;
-      color: var(--muted);
-      font-size: 18px;
-      line-height: 1.8;
+      margin: 0 auto 22px;
     }
 
     .contato {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
-      margin-top: 34px;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
     }
 
-    .contato-item {
-      padding: 28px;
-      background: var(--bg-soft);
-      border: 1px solid var(--line);
-      border-radius: 8px;
+    .contato div {
+      background: #111;
+      padding: 24px;
+      border: 1px solid #222;
+      border-radius: 6px;
     }
 
-    .contato-item small {
-      display: block;
-      margin-bottom: 10px;
-      color: var(--muted);
-      font-size: 13px;
-      letter-spacing: 0.10em;
-      text-transform: uppercase;
-    }
-
-    .contato-item a {
-      color: var(--text);
+    .contato a {
+      color: #fff;
       text-decoration: none;
-      font-size: 26px;
-      line-height: 1.4;
+      font-size: 22px;
       word-break: break-word;
     }
 
     footer {
-      border-top: 1px solid var(--line);
-      padding: 28px 0 34px;
+      margin-top: 60px;
       text-align: center;
-      color: #9e9e9e;
-      font-size: 14px;
+      border-top: 1px solid #222;
+      padding: 24px;
+      color: #777;
     }
 
-    .whatsapp-fixo {
+    .whatsapp {
       position: fixed;
-      right: 18px;
-      bottom: 18px;
-      background: #ffffff;
-      color: #000000;
+      bottom: 20px;
+      right: 20px;
+      background: #fff;
+      color: #000;
+      padding: 12px 16px;
+      border-radius: 30px;
       text-decoration: none;
-      padding: 13px 18px;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 14px;
-      box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+      font-weight: bold;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.25);
     }
 
-    @media (max-width: 900px) {
-      .topo .container {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .areas-grid,
-      .diferenciais,
+    @media (max-width: 768px) {
+      .cards,
       .contato {
         grid-template-columns: 1fr;
       }
 
-      .area {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        border-right: none !important;
-      }
-
-      .area:nth-last-child(-n+2) {
-        border-bottom: 1px solid var(--line);
-      }
-
-      .area:last-child {
-        border-bottom: none;
-      }
-
-      h1 {
-        font-size: 46px;
-      }
-
-      .subtitulo {
-        font-size: 19px;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .container {
-        padding: 0 20px;
-      }
-
-      .brand-logo {
-        width: 82px;
-      }
-
-      .hero-logo {
-        width: 190px;
+      nav a {
+        margin-left: 0;
+        margin-right: 16px;
       }
 
       h1 {
@@ -379,177 +220,134 @@
       }
 
       h2 {
-        font-size: 32px;
+        font-size: 28px;
       }
 
-      .subtitulo,
-      .lead,
-      .area p,
-      .diferencial p,
-      .cta-final p {
-        font-size: 17px;
+      .hero img {
+        height: 100px;
       }
 
-      .contato-item a {
-        font-size: 20px;
+      .btn-secundario {
+        margin-left: 0;
+        margin-top: 12px;
       }
     }
   </style>
 </head>
 <body>
 
-  <header class="topo">
-    <div class="container">
-      <div class="brand">
-        <img src="logo.png?v=2" alt="Carrijo e Nesti Advogados" class="brand-logo">
-        <div class="brand-name">Carrijo e Nesti Advogados</div>
-      </div>
+  <header class="container">
+    <img src="logo.png?v=2" class="logo" alt="Carrijo e Nesti Advogados">
 
-      <nav class="menu">
-        <a href="#sobre">Sobre</a>
-        <a href="#areas">Áreas de Atuação</a>
-        <a href="#diferenciais">Diferenciais</a>
-        <a href="#contato">Contato</a>
-      </nav>
-    </div>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#atuacao">Atuação</a>
+      <a href="#direitos">Seus Direitos</a>
+      <a href="#contato">Contato</a>
+    </nav>
   </header>
 
   <section class="hero">
-    <div class="container">
-      <img src="logo.png?v=2" alt="Logo Carrijo e Nesti Advogados" class="hero-logo">
+    <img src="logo.png?v=2" alt="Carrijo e Nesti Advogados">
 
-      <h1>Carrijo e Nesti Advogados</h1>
+    <h1>Advocacia Trabalhista com foco em rescisão, verbas não pagas e direitos do trabalhador</h1>
 
-      <p class="subtitulo">
-        Atuação jurídica estratégica e personalizada em Direito do Trabalho, Civil, Criminal, Família, Sucessões e Empresarial.
-      </p>
+    <p>
+      Se você foi demitido, não recebeu corretamente, trabalhou sem registro ou está sofrendo irregularidades no trabalho, fale agora com um advogado trabalhista e entenda quais direitos podem ser exigidos.
+    </p>
 
-      <div class="hero-botoes">
-        <a class="botao botao-principal" href="https://wa.me/5521988767797?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20atendimento" target="_blank">
-          Fale conosco no WhatsApp
-        </a>
+    <a class="btn" href="https://wa.me/5521988767797?text=Olá,%20vim%20pelo%20site%20e%20quero%20analisar%20meu%20caso%20trabalhista" target="_blank">
+      Analisar meu caso no WhatsApp
+    </a>
 
-        <a class="botao botao-secundario" href="#contato">
-          Entrar em contato
-        </a>
+    <a class="btn btn-secundario" href="#contato">
+      Entrar em contato
+    </a>
+  </section>
+
+  <section id="sobre" class="container">
+    <h2>Atuação focada em Direito do Trabalho</h2>
+    <p>
+      O escritório Carrijo e Nesti Advogados atua de forma estratégica em demandas trabalhistas, com foco na proteção dos direitos do trabalhador e na análise técnica de verbas rescisórias, vínculo de emprego, horas extras, assédio moral e demais irregularidades cometidas pelo empregador.
+    </p>
+    <p>
+      O objetivo é oferecer orientação clara, rápida e segura para quem precisa entender se tem valores a receber e qual é o caminho jurídico mais adequado para o seu caso.
+    </p>
+  </section>
+
+  <section id="atuacao" class="container">
+    <h2>Como podemos ajudar</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Rescisão e verbas trabalhistas</h3>
+        <p>Análise de rescisão, aviso prévio, saldo de salário, férias, 13º, FGTS, multa de 40% e demais verbas não pagas corretamente.</p>
+      </div>
+
+      <div class="card">
+        <h3>Horas extras e jornada</h3>
+        <p>Atuação em casos de horas extras não pagas, intervalos suprimidos, adicional noturno, banco de horas irregular e jornada excessiva.</p>
+      </div>
+
+      <div class="card">
+        <h3>Vínculo de emprego e falta de registro</h3>
+        <p>Análise de situações em que o trabalhador atuou sem carteira assinada, como PJ, MEI ou autônomo, mas com características de empregado.</p>
+      </div>
+
+      <div class="card">
+        <h3>Assédio moral e irregularidades no ambiente de trabalho</h3>
+        <p>Atuação em situações de humilhação, perseguição, pressão abusiva, tratamento degradante e outras violações no ambiente profissional.</p>
       </div>
     </div>
   </section>
 
-  <section id="sobre">
-    <div class="container section-narrow">
-      <h2>Sobre o Escritório</h2>
-      <p class="lead">
-        O escritório Carrijo e Nesti Advogados atua com seriedade, discrição e excelência técnica, oferecendo soluções jurídicas seguras para pessoas físicas e jurídicas, com atendimento próximo, análise estratégica e condução profissional de cada caso.
-      </p>
+  <section id="direitos" class="container">
+    <h2>Situações mais comuns que podem gerar ação trabalhista</h2>
+
+    <div class="lista">
+      <div class="lista-item">Fui demitido e não recebi tudo corretamente.</div>
+      <div class="lista-item">Trabalhei sem carteira assinada.</div>
+      <div class="lista-item">Fazia horas extras e a empresa não pagava.</div>
+      <div class="lista-item">Recebia por fora ou tinha salário diferente do registrado.</div>
+      <div class="lista-item">Sofri assédio moral ou pressão abusiva no trabalho.</div>
+      <div class="lista-item">Pedi demissão, mas desconfio que meus direitos foram calculados errado.</div>
     </div>
   </section>
 
-  <section id="areas">
-    <div class="container">
-      <h2>Áreas de Atuação</h2>
-      <p class="lead">
-        Atendimento técnico e personalizado em demandas consultivas, preventivas e contenciosas.
-      </p>
-
-      <div class="areas-grid">
-        <div class="area">
-          <h3>Direito do Trabalho</h3>
-          <p>Reclamações trabalhistas, verbas rescisórias, vínculo de emprego, horas extras, defesa empresarial e consultoria preventiva.</p>
-        </div>
-
-        <div class="area">
-          <h3>Direito Civil</h3>
-          <p>Contratos, responsabilidade civil, cobranças, indenizações, obrigações e conflitos patrimoniais.</p>
-        </div>
-
-        <div class="area">
-          <h3>Direito Criminal</h3>
-          <p>Defesa técnica em procedimentos criminais, inquéritos, audiências e acompanhamento jurídico especializado.</p>
-        </div>
-
-        <div class="area">
-          <h3>Direito de Família</h3>
-          <p>Divórcio, guarda, pensão alimentícia, dissolução de união estável e conflitos familiares.</p>
-        </div>
-
-        <div class="area">
-          <h3>Sucessões</h3>
-          <p>Inventário, arrolamento, partilha, planejamento sucessório e regularização patrimonial.</p>
-        </div>
-
-        <div class="area">
-          <h3>Direito Empresarial</h3>
-          <p>Assessoria jurídica estratégica para empresas, contratos, prevenção de passivos, cobrança e suporte contencioso.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="diferenciais">
-    <div class="container">
-      <h2>Diferenciais</h2>
-
-      <div class="diferenciais">
-        <div class="diferencial">
-          <h3>Atendimento personalizado</h3>
-          <p>Cada demanda é analisada com atenção técnica e estratégia adequada às particularidades do caso.</p>
-        </div>
-
-        <div class="diferencial">
-          <h3>Atuação estratégica</h3>
-          <p>Condução jurídica com foco em segurança, clareza e tomada de decisão bem estruturada.</p>
-        </div>
-
-        <div class="diferencial">
-          <h3>Discrição e compromisso</h3>
-          <p>Postura profissional, sigilo e seriedade na condução de questões sensíveis e patrimoniais.</p>
-        </div>
-
-        <div class="diferencial">
-          <h3>Comunicação objetiva</h3>
-          <p>Contato direto, orientação clara e acompanhamento próximo em todas as etapas relevantes.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container cta-final">
-      <h2>Atendimento jurídico com seriedade e clareza.</h2>
+  <section class="container">
+    <div class="cta-box">
+      <h2>Quanto antes seu caso for analisado, melhor</h2>
       <p>
-        Entre em contato com o escritório para orientação inicial e análise do caminho jurídico mais adequado ao seu caso.
+        Em matéria trabalhista, tempo e prova fazem diferença. Se você está em dúvida sobre seus direitos, o ideal é buscar orientação o quanto antes para avaliar documentos, mensagens, recibos e demais elementos do caso.
       </p>
 
-      <a class="botao botao-principal" href="https://wa.me/5521988767797?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20atendimento" target="_blank">
-        Iniciar atendimento
+      <a class="btn" href="https://wa.me/5521988767797?text=Olá,%20vim%20pelo%20site%20e%20quero%20analisar%20meu%20caso%20trabalhista" target="_blank">
+        Falar com advogado agora
       </a>
     </div>
   </section>
 
-  <section id="contato">
-    <div class="container">
-      <h2>Contato</h2>
+  <section id="contato" class="container">
+    <h2>Contato</h2>
 
-      <div class="contato">
-        <div class="contato-item">
-          <small>WhatsApp</small>
-          <a href="https://wa.me/5521988767797?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20atendimento" target="_blank">(21) 98876-7797</a>
-        </div>
+    <div class="contato">
+      <div>
+        <strong>WhatsApp</strong><br><br>
+        <a href="https://wa.me/5521988767797?text=Olá,%20vim%20pelo%20site%20e%20quero%20analisar%20meu%20caso%20trabalhista" target="_blank">(21) 98876-7797</a>
+      </div>
 
-        <div class="contato-item">
-          <small>E-mail</small>
-          <a href="mailto:fnesti_@hotmail.com">fnesti_@hotmail.com</a>
-        </div>
+      <div>
+        <strong>E-mail</strong><br><br>
+        <a href="mailto:fnesti_@hotmail.com">fnesti_@hotmail.com</a>
       </div>
     </div>
   </section>
 
   <footer>
-    © 2026 Carrijo e Nesti Advogados. Todos os direitos reservados.
+    © 2026 Carrijo e Nesti Advogados
   </footer>
 
-  <a class="whatsapp-fixo" href="https://wa.me/5521988767797?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20atendimento" target="_blank">
+  <a class="whatsapp" href="https://wa.me/5521988767797?text=Olá,%20vim%20pelo%20site%20e%20quero%20analisar%20meu%20caso%20trabalhista" target="_blank">
     WhatsApp
   </a>
 
